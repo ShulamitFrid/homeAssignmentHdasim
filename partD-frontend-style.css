@@ -1,0 +1,276 @@
+/* ----- General Settings ----- */
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background-color: #f8f9fa;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* ----- Main Heading ----- */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ----- Container for main sections (Owner page) ----- */
+.owner-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ----- General Styling for Sections ----- */
+section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 400px;
+    min-width: 320px;
+    margin-bottom: 20px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+/* ----- Section Headings (h2) ----- */
+section h2 {
+    color: #007bff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* ----- General Form Element Styling ----- */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ----- Form Container Styling ----- */
+form {
+    text-align: center;
+}
+
+/* ----- Button Styling ----- */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px 5px;
+    min-width: 100px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ----- Product Selection Area (Owner page) ----- */
+#productsForOrder {
+    border: 1px solid #eee;
+    padding: 10px;
+    min-height: 50px;
+    margin-top: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: right;
+}
+
+/* ----- Individual Product Item in Order Form ----- */
+.product-order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 8px 5px;
+    border-bottom: 1px dashed #eee;
+    text-align: right;
+}
+
+.product-order-item:last-child {
+    border-bottom: none;
+}
+
+.product-order-item label {
+    flex-grow: 1;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.product-order-item input[type="checkbox"] {
+    margin: 0 0 0 8px;
+    flex-shrink: 0;
+}
+
+.product-order-item input[type="number"] {
+    display: inline-block;
+    width: 70px;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* ----- Orders Table Styling (Owner page) ----- */
+#allOrdersList {
+    margin-top: 15px;
+}
+
+#allOrdersList table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#allOrdersList th,
+#allOrdersList td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: right;
+    vertical-align: middle;
+    word-break: break-word;
+}
+
+#allOrdersList th {
+    background-color: #e9ecef;
+    font-weight: 600;
+}
+
+/* ----- Button Styling within Tables ----- */
+#allOrdersList .order-actions button {
+    padding: 4px 10px;
+    font-size: 0.9em;
+    margin: 2px;
+}
+
+/* ----- Status Tag Styling ----- */
+.order-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9em;
+    display: inline-block;
+    min-width: 70px;
+    text-align: center;
+    font-weight: bold;
+}
+/* Status-specific colors */
+.status-pending { background-color: #ffc107; color: #333; }
+.status-in-process { background-color: #17a2b8; }
+.status-completed { background-color: #28a745; }
+
+/* ----- Supplier Page Specific Styles ----- */
+/* Login and Register sections */
+#login, #register {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Product Entry row in Registration Form */
+.product-entry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.product-entry:last-of-type {
+     border-bottom: none;
+}
+
+/* Inputs within Product Entry row */
+.product-entry input {
+    display: inline-block;
+    width: auto;
+    flex-grow: 1;
+    min-width: 120px;
+    max-width: 180px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+/* Remove button within Product Entry row */
+.product-entry button.remove-product-btn {
+    width: auto;
+    padding: 6px 12px;
+    background-color: #dc3545;
+    margin: 5px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.product-entry button.remove-product-btn:hover {
+    background-color: #c82333;
+}
+
+/* Main buttons in the Register Form */
+#registerForm > button {
+     display: block;
+     margin: 20px auto 10px auto;
+     width: 50%;
+     max-width: 200px;
+}
+
+/* Styling for a main (potentially unused) remove button */
+#registerForm > button.remove-product-btn {
+    display: none;
+    background-color: #dc3545;
+    width: 50%;
+    max-width: 200px;
+}
+#registerForm > button.remove-product-btn:hover {
+    background-color: #c82333;
+}
+
+/* Hide Orders section on Supplier page initially */
+#orders {
+    display: none;
+}
+
+/* Supplier Orders List Styling */
+#ordersList {
+    list-style: none;
+    padding: 0;
+}
+#ordersList li {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+}
+#ordersList li p {
+    margin: 5px 0;
+}
+#ordersList li .order-actions {
+    margin-top: 10px;
+    text-align: left;
+}

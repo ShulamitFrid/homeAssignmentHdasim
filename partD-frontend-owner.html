@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ממשק ניהול מכולת</title>
+    <link rel="stylesheet" href="partD-frontend-style.css"> </head>
+<body>
+    <h1>ממשק ניהול מכולת</h1>
+
+
+    <!--Placing a new order to a supplier -->
+    <section id="place-order">
+        <h2>ביצוע הזמנה חדשה</h2>
+        <form id="newOrderForm">
+            <div>
+                <label for="supplierSelect">בחר ספק:</label>
+                <select id="supplierSelect" required>
+                    <option value="">טוען ספקים...</option>
+                </select>
+            </div>
+            <div id="productsForOrder" style="margin-top: 15px; border: 1px solid #eee; padding: 10px; min-height: 50px;">
+                <p>אנא בחר ספק כדי לראות מוצרים.</p>
+            </div>
+            <button type="submit">שלח הזמנה</button>
+        </form>
+    </section>
+
+    
+    <!--Viewing all existing orders -->
+    <section id="view-orders">
+        <h2>צפייה בהזמנות קיימות</h2>
+        <button id="refreshOrdersBtn">רענן רשימת הזמנות</button>
+        <div id="allOrdersList" style="margin-top: 15px;">
+            <p>טוען הזמנות...</p>
+            </div>
+    </section>
+
+    <script src="partD-frontend-owner.js"></script>
+</body>
+</html>

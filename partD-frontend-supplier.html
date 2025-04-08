@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ממשק ניהול מכולת</title>
+    <link rel="stylesheet" href="partD-frontend-style.css">
+</head>
+<body>
+    <h1>ניהול ספקים</h1>
+
+    <!--Suppliers registration--> 
+    <section id="register">
+        <h2>רישום ספק</h2>
+        <form id="registerForm">
+            <input type="text" id="companyName" placeholder="שם חברה" required>
+            <input type="text" id="phone" placeholder="מספר טלפון" required>
+            <input type="text" id="representative_name" placeholder="שם נציג" required>
+            
+            <div id="productsList">
+                <div class="product-entry">
+                    <input type="text" class="product-name" placeholder="שם מוצר" required>
+                    <input type="number" class="product-price" placeholder="מחיר ליחידה" min="0" step="0.01" required>
+                    <input type="number" class="product-min-qty" placeholder="כמות מינימלית" min="1" required>
+                </div>
+            </div>
+            
+            <button type="button" id="addProductBtn">הוסף מוצר</button>
+            <button type="button" class="remove-product-btn" style="display: none;">הסר מוצר</button> 
+            <button type="submit">הרשם</button>
+        </form>
+    </section>
+
+    <!--Suppliers login-->
+    <section id="login">
+        <h2>כניסת ספק</h2>
+        <form id="loginForm">
+            <input type="text" id="loginCompanyName" placeholder="שם חברה" required>
+            <input type="text" id="loginPhone" placeholder="מספר טלפון" required>
+            <button type="submit">התחבר</button>
+        </form>
+    </section>
+
+    <!--Supplier list of orders-->
+    <section id="orders" style="display: none;">
+        <h2>הזמנות עבור <span id="loggedInSupplierName"></span></h2>
+        <ul id="ordersList"></ul>
+    </section>
+
+    <script src="partD-frontend-supplier.js"></script>
+</body>
+</html>
